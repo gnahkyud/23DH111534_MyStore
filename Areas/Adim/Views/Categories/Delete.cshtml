@@ -1,0 +1,43 @@
+﻿@model _23dh111534_MyStore.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Adim/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="bg-success">XÓA DANH MỤC</h2>
+
+
+
+
+     @using (Html.BeginForm())
+ {
+            @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <h4>
+                BẠN CÓ CHẮC CHẮN MUỐN XÓA DANH MỤC NÀY KHÔNG?
+            </h4>
+            <div class="form-group">
+                <div class="control-label col-md-2">TÊN DANH MỤC </div>
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.CategoryName)
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+
+                        <input type="submit" value="XÓA" class="btn btn-primary" /> |
+                        @Html.ActionLink("QUAY LẠI DANH SÁCH", "Index", new { @class = "btn btn-primary " })
+
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+
+        }

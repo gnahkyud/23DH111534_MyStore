@@ -1,0 +1,29 @@
+﻿@model _23dh111534_MyStore.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Adim/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>THÔNG TIN CHI TIẾT CỦA DANH MỤC </h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal ">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.CategoryName)*@
+            TÊN DANH MỤC
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Cập Nhật", "Edit", new { id = Model.CategoryID }, new { @class = "btn btn-primary" }) |
+
+    @Html.ActionLink("QUAY LẠI DANH SÁCH", "Index", null, new {@class = "btn btn-primary" })
+</p>
